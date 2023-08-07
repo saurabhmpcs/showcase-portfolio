@@ -19,6 +19,7 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import img2 from "./images/img2.png";
 import img3 from "./images/img3.png";
+import img4 from "./images/img4.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -288,7 +289,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <Image
-                  src={img2}
+                  src={img4}
                   className="h-48 w-96 mb-3 object-cover"
                   alt={""}
                 />
@@ -301,11 +302,14 @@ export default function Home() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-around items-center">
-                <Link href={"https://chaton-c2955.web.app/"} target="_blank">
+                <Link
+                  href={"https://foo-d-villa-app.vercel.app/"}
+                  target="_blank"
+                >
                   <Button variant={"outline"}>Live Demo</Button>
                 </Link>
                 <Link
-                  href={"https://github.com/Eclarkhalid/APneck"}
+                  href={"https://github.com/saurabhmpcs/FooDVilla-App"}
                   target="_blank"
                 >
                   <Button variant={"outline"}>Code</Button>
