@@ -1,118 +1,312 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
+import Link from "next/link";
+import img from "./images/img.png";
+import { AiFillCheckCircle, AiFillMail } from "react-icons/ai";
 
-const inter = Inter({ subsets: ['latin'] })
+import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import img2 from "./images/img2.png";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <header className=" py-3 lg:px-52  px-12 bg-white shadow sticky top-0 left-0 right-0">
+        <div className="container-xxl">
+          <div className="flex justify-between items-center">
+            <div className="logo">
+              <Avatar className="font-bold text-2xl items-center">
+                S<span className=" text-blue-600 font-extrabold">S</span>
+              </Avatar>
+            </div>
+            <div className="social-links space-x-14 hidden md:flex lg:flex">
+              <Link className="text-xl uppercase" href={"#home"}>
+                Home
+              </Link>
+              <Link className="text-xl uppercase" href={"#about"}>
+                About
+              </Link>
+              <Link className="text-xl uppercase" href={"#projects"}>
+                Projects
+              </Link>
+              <Link className="text-xl uppercase" href={"#contact"}>
+                Contact
+              </Link>
+            </div>
+            <div className="resume">
+              <Link href="https://www.fiverr.com/s/m6pko7" target="_blank">
+                <Button>Hire Me</Button>
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
+      <Separator />
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section id="home" className=" items-center">
+        <div className="container-xl">
+          <Card className=" justify-center items-center text-center border-0 bg-gradient-to-b from-teal-200">
+            <CardHeader>
+              <div className="mx-auto rounded-full w-80 h-80 relative overflow-hidden my-14">
+                <Image
+                  src={img}
+                  alt={"image"}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <CardTitle>
+                <h1 className="leading-8 font-bold text-4xl">
+                  Saurabh <span className="text-blue-600">Singh</span>
+                </h1>
+              </CardTitle>
+              <CardDescription>
+                <p className="text-xl my-2">Front-End Developer</p>
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="leading-8 text-xl max-w-sm mx-auto">
+                Create the best web application for your business with me.
+              </p>
+            </CardContent>
+            <CardFooter className="flex justify-center items-center text-3xl opacity-60 space-x-8">
+              <Link className=" hover:text-blue-900" href={""} target="_blank">
+                <BsGithub />
+              </Link>
+              <Link className=" hover:text-blue-900" href={""}>
+                <BsLinkedin />
+              </Link>
+              <Link className=" hover:text-blue-900" href={""}>
+                <BsTwitter />
+              </Link>
+            </CardFooter>
+          </Card>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section id="about" className="px-5 my-20">
+        <div className="container-xl">
+          <div className="lg:flex justify-around items-center">
+            <Card className="my-3">
+              <CardHeader>
+                <CardTitle className="text-center">
+                  <h1 className="uppercase text-3xl">Who am I?</h1>
+                </CardTitle>
+                <CardDescription>
+                  <p className="text-xl mx-auto max-w-md text-center">
+                    I am Saurabh Singh a front-end Developer
+                  </p>
+                </CardDescription>
+              </CardHeader>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+              <CardContent>
+                <Tabs
+                  defaultValue="education"
+                  className="w-[250px] lg:w-[300px] p-10"
+                >
+                  <TabsList className="lg:flex justify-evenly">
+                    <TabsTrigger value="education">Education</TabsTrigger>
+                    <TabsTrigger value="skills">Skills</TabsTrigger>
+                  </TabsList>
+                  <TabsContent defaultValue={"education"} value="education">
+                    <p className="leading-8 max-w-lg mx-auto">
+                      {" "}
+                      <span className="text-blue-700">
+                        I have completed my engineering in electronics and
+                        communication from NIET greater noida with a score of
+                        72.3%.
+                      </span>
+                    </p>
+                  </TabsContent>
+                  <TabsContent defaultValue={"skills"} value="skills">
+                    <p className="leading-8 max-w-lg mx-auto">
+                      <span className="text-red-600">
+                        I am proficient in making front-end part of web
+                        application using technologies like Html, CSS(tailwind),
+                        JavaScript, ReactJs, Redux.
+                      </span>
+                    </p>
+                  </TabsContent>
+                </Tabs>
+              </CardContent>
+              <CardFooter className="flex justify-center">
+                <Link href={"/"}>
+                  <Button>Download Cv</Button>
+                </Link>
+              </CardFooter>
+            </Card>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
+            <Card className="my-3">
+              <CardHeader>
+                <CardTitle className="text-center">
+                  <h1 className="uppercase text-3xl">About me</h1>
+                </CardTitle>
+                <CardDescription>
+                  <p className="text-xl text-center max-w-lg mx-auto">
+                    Get to know more about me
+                  </p>
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="leading-10 mx-auto max-w-xl">
+                  As a web developer, I am a well-disposed, open-minded, and
+                  sociable individual, passionate about creating dynamic and
+                  engaging digital experiences. My expertise lies in{" "}
+                  <span className="text-blue-600">
+                    HTML, CSS(TailwindCss), JavaScript, React, Next.js
+                  </span>
+                  , and <span className="text-blue-600">Redux</span>, allowing
+                  me to build modern and interactive web applications. With a
+                  strong foundation in web development, I have acquired
+                  proficiency in crafting responsive layouts, implementing
+                  intuitive user interfaces, and optimizing performance for
+                  seamless user experiences, enabling me to work on diverse
+                  projects with versatility and adaptability.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <section id="projects" className="px-4 my-20 bg-slate-200">
+        <div className="conatiner-xl">
+          <div className="text-center">
+            <h1 className="text-bold text-3xl font-bold p-3 uppercase">
+              Projects
+            </h1>
+            <p className="text-muted-foreground mb-2">
+              All the projects I have managed to complete.
+            </p>
+          </div>
+          <div className="lg:flex justify-around">
+            <Card className="mb-3">
+              <CardHeader>
+                <CardTitle>
+                  <div className="flex justify-around">
+                    <h1 className="mb-2"> Name</h1>
+                    <AiFillCheckCircle className=" text-green-900" />
+                  </div>
+                </CardTitle>
+                <CardDescription>
+                  Apneck Is An eccomerce website
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Image
+                  src={img2}
+                  className="h-48 w-96 mb-3 object-cover"
+                  alt={""}
+                />
+                <h1 className="text-xl ">Languages & Libraries</h1>
+                <div className="flex space-x-5 my-2 text-blue-600">
+                  <p>Next-Js</p>
+                  <p>React</p>
+                  <p>Material-UI</p>
+                  <p>Firebase</p>
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-around items-center">
+                <Link href={"https://chaton-c2955.web.app/"} target="_blank">
+                  <Button variant={"outline"}>Live Demo</Button>
+                </Link>
+                <Link
+                  href={"https://github.com/Eclarkhalid/APneck"}
+                  target="_blank"
+                >
+                  <Button variant={"outline"}>Code</Button>
+                </Link>
+              </CardFooter>
+            </Card>
+            <Card className="mb-3">
+              <CardHeader>
+                <CardTitle>
+                  <div className="flex justify-around">
+                    <h1 className="mb-2"> Name</h1>
+                    <AiFillCheckCircle className=" text-green-900" />
+                  </div>
+                </CardTitle>
+                <CardDescription>
+                  Apneck Is An eccomerce website
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Image
+                  src={img2}
+                  className="h-48 w-96 mb-3 object-cover"
+                  alt={""}
+                />
+                <h1 className="text-xl ">Languages & Libraries</h1>
+                <div className="flex space-x-5 my-2 text-blue-600">
+                  <p>Next-Js</p>
+                  <p>React</p>
+                  <p>Material-UI</p>
+                  <p>Firebase</p>
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-around items-center">
+                <Link href={"https://chaton-c2955.web.app/"} target="_blank">
+                  <Button variant={"outline"}>Live Demo</Button>
+                </Link>
+                <Link
+                  href={"https://github.com/Eclarkhalid/APneck"}
+                  target="_blank"
+                >
+                  <Button variant={"outline"}>Code</Button>
+                </Link>
+              </CardFooter>
+            </Card>
+            <Card className="mb-3">
+              <CardHeader>
+                <CardTitle>
+                  <div className="flex justify-around">
+                    <h1 className="mb-2"> Name</h1>
+                    <AiFillCheckCircle className=" text-green-900" />
+                  </div>
+                </CardTitle>
+                <CardDescription>
+                  Apneck Is An eccomerce website
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Image
+                  src={img2}
+                  className="h-48 w-96 mb-3 object-cover"
+                  alt={""}
+                />
+                <h1 className="text-xl ">Languages & Libraries</h1>
+                <div className="flex space-x-5 my-2 text-blue-600">
+                  <p>Next-Js</p>
+                  <p>React</p>
+                  <p>Material-UI</p>
+                  <p>Firebase</p>
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-around items-center">
+                <Link href={"https://chaton-c2955.web.app/"} target="_blank">
+                  <Button variant={"outline"}>Live Demo</Button>
+                </Link>
+                <Link
+                  href={"https://github.com/Eclarkhalid/APneck"}
+                  target="_blank"
+                >
+                  <Button variant={"outline"}>Code</Button>
+                </Link>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
