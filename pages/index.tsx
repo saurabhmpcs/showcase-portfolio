@@ -13,10 +13,14 @@ import Image from "next/image";
 import Link from "next/link";
 import img from "./images/img.png";
 import { AiFillCheckCircle, AiFillMail } from "react-icons/ai";
+import { BiPhoneCall } from "react-icons/bi";
 
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import img2 from "./images/img2.png";
+import img3 from "./images/img3.png";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Home() {
   return (
@@ -194,12 +198,12 @@ export default function Home() {
               <CardHeader>
                 <CardTitle>
                   <div className="flex justify-around">
-                    <h1 className="mb-2"> Name</h1>
+                    <h1 className="mb-2"> ChatOn</h1>
                     <AiFillCheckCircle className=" text-green-900" />
                   </div>
                 </CardTitle>
                 <CardDescription>
-                  Apneck Is An eccomerce website
+                  ChatOn Is A Messaging Platform
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -221,7 +225,7 @@ export default function Home() {
                   <Button variant={"outline"}>Live Demo</Button>
                 </Link>
                 <Link
-                  href={"https://github.com/Eclarkhalid/APneck"}
+                  href={"https://github.com/saurabhmpcs/ChatOn-App"}
                   target="_blank"
                 >
                   <Button variant={"outline"}>Code</Button>
@@ -232,17 +236,17 @@ export default function Home() {
               <CardHeader>
                 <CardTitle>
                   <div className="flex justify-around">
-                    <h1 className="mb-2"> Name</h1>
+                    <h1 className="mb-2"> JSM Headphones</h1>
                     <AiFillCheckCircle className=" text-green-900" />
                   </div>
                 </CardTitle>
                 <CardDescription>
-                  Apneck Is An eccomerce website
+                  JSM Headphones Is An eccomerce website
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <Image
-                  src={img2}
+                  src={img3}
                   className="h-48 w-96 mb-3 object-cover"
                   alt={""}
                 />
@@ -250,16 +254,20 @@ export default function Home() {
                 <div className="flex space-x-5 my-2 text-blue-600">
                   <p>Next-Js</p>
                   <p>React</p>
-                  <p>Material-UI</p>
-                  <p>Firebase</p>
+                  <p>Vanilla Css</p>
+                  <p>Sanity</p>
+                  <p>Stripe</p>
                 </div>
               </CardContent>
               <CardFooter className="flex justify-around items-center">
-                <Link href={"https://chaton-c2955.web.app/"} target="_blank">
+                <Link
+                  href={"https://ecommerce-lime-pi.vercel.app//"}
+                  target="_blank"
+                >
                   <Button variant={"outline"}>Live Demo</Button>
                 </Link>
                 <Link
-                  href={"https://github.com/Eclarkhalid/APneck"}
+                  href={"https://github.com/saurabhmpcs/ecommerce"}
                   target="_blank"
                 >
                   <Button variant={"outline"}>Code</Button>
@@ -307,6 +315,50 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section id="contact" className="p-5 my-20 bg-slate-300">
+        <div className="container-xl">
+          <div className="text-center">
+            <h1 className="text-3xl my-3 font-semi-bold">Leave Me A Message</h1>
+          </div>
+          <div className="flex items-center justify-center">
+            <Card className=" w-[600px] p-4">
+              <CardContent>
+                <h2 className="text-xl my-3">Email</h2>
+                <Input placeholder="Enter email" />
+                <h2 className="text-xl my-3">Message</h2>
+                <Textarea placeholder="Input your message" />
+                <Button className="my-3">Send</Button>
+              </CardContent>
+              <Separator />
+              <CardFooter className="flex justify-around mt-4">
+                <h2>Send me an Email Instead</h2>
+                <a href="mailto:saurabhmpcs1998@gmail.com">
+                  <AiFillMail className="text-2xl text-red-700" />
+                </a>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <Separator />
+
+      <footer className="p-5 shadow">
+        <div className="container-xl">
+          <div className="flex justify-around items-center text-center">
+            <h1>
+              Developed by:{" "}
+              <span className="text-blue-700 text-xl">Saurabh Singh</span>
+              &nbsp;&copy;2023
+            </h1>
+            <a href="tel:+123456789" className="flex items-center">
+              <BiPhoneCall />
+              &nbsp;<span className="text-blue-600">7701916720</span>
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
