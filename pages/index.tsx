@@ -49,7 +49,10 @@ export default function Home() {
               </Link>
             </div>
             <div className="resume">
-              <Link href="https://www.fiverr.com/s/m6pko7" target="_blank">
+              <Link
+                href="https://rxresu.me/saurabh.rgt/saurabh-singh"
+                target="_blank"
+              >
                 <Button>Hire Me</Button>
               </Link>
             </div>
