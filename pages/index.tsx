@@ -148,7 +148,7 @@ export default function Home() {
                 </Tabs>
               </CardContent>
               <CardFooter className="flex justify-center">
-                <Link href={"/"}>
+                <Link href={"https://rxresu.me/saurabh.rgt/saurabh-singh"}>
                   <Button>Download Cv</Button>
                 </Link>
               </CardFooter>
