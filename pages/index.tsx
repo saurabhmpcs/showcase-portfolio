@@ -88,13 +88,23 @@ export default function Home() {
               </p>
             </CardContent>
             <CardFooter className="flex justify-center items-center text-3xl opacity-60 space-x-8">
-              <Link className=" hover:text-blue-900" href={""} target="_blank">
+              <Link
+                className=" hover:text-blue-900"
+                href="https://github.com/saurabhmpcs"
+                target="_blank"
+              >
                 <BsGithub />
               </Link>
-              <Link className=" hover:text-blue-900" href={""}>
+              <Link
+                className=" hover:text-blue-900"
+                href="https://www.linkedin.com/in/saurabh-singh-818886193/"
+              >
                 <BsLinkedin />
               </Link>
-              <Link className=" hover:text-blue-900" href={""}>
+              <Link
+                className=" hover:text-blue-900"
+                href="https://twitter.com/home"
+              >
                 <BsTwitter />
               </Link>
             </CardFooter>
@@ -282,12 +292,12 @@ export default function Home() {
               <CardHeader>
                 <CardTitle>
                   <div className="flex justify-around">
-                    <h1 className="mb-2"> Name</h1>
+                    <h1 className="mb-2"> FoodVilla</h1>
                     <AiFillCheckCircle className=" text-green-900" />
                   </div>
                 </CardTitle>
                 <CardDescription>
-                  Apneck Is An eccomerce website
+                  FoodVIlla Is A Food Ordering website.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -298,10 +308,10 @@ export default function Home() {
                 />
                 <h1 className="text-xl ">Languages & Libraries</h1>
                 <div className="flex space-x-5 my-2 text-blue-600">
-                  <p>Next-Js</p>
+                  <p>Parcel</p>
                   <p>React</p>
-                  <p>Material-UI</p>
-                  <p>Firebase</p>
+                  <p>TailwindCss</p>
+                  <p>Redux ToolKit</p>
                 </div>
               </CardContent>
               <CardFooter className="flex justify-around items-center">
