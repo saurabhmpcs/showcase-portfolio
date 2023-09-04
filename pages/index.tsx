@@ -20,6 +20,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import img2 from "./images/img2.png";
 import img3 from "./images/img3.png";
 import img4 from "./images/img4.png";
+import img5 from "./images/img5.png";
+import img6 from "./images/img6.png";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -207,7 +209,7 @@ export default function Home() {
               All the projects I have managed to complete.
             </p>
           </div>
-          <div className="lg:flex justify-around">
+          <div className="lg:flex justify-around flex-wrap">
             <Card className="mb-3">
               <CardHeader>
                 <CardTitle>
@@ -329,6 +331,92 @@ export default function Home() {
                 </Link>
               </CardFooter>
             </Card>
+            <Card className="mb-3">
+              <CardHeader>
+                <CardTitle>
+                  <div className="flex justify-around">
+                    <h1 className="mb-2"> NetflixGPT</h1>
+                    <AiFillCheckCircle className=" text-green-900" />
+                  </div>
+                </CardTitle>
+                <CardDescription>
+                  NetfliXGPT is a netlfix clone with GPT search bar
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Image
+                  src={img6}
+                  className="h-48 w-96 mb-3 object-cover"
+                  alt={""}
+                />
+                <h1 className="text-xl ">Languages & Libraries</h1>
+                <div className="flex flex-wrap  my-2 w-80 text-blue-600">
+                  <p className="">React</p>
+                  <p className="ml-5">TailwindCss</p>
+                  <p className="ml-5">Redux ToolKit</p>
+                  <p className="ml-3">OpenAi</p>
+                  <p className="">Firebase</p>
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-around items-center">
+                <Link
+                  href={"https://netflix-gpt-mr4p.vercel.app/"}
+                  target="_blank"
+                >
+                  <Button variant={"outline"}>Live Demo</Button>
+                </Link>
+                <Link
+                  href={"https://github.com/saurabhmpcs/netflix-gpt"}
+                  target="_blank"
+                >
+                  <Button variant={"outline"}>Code</Button>
+                </Link>
+              </CardFooter>
+            </Card>
+            <Card className="mb-3   ">
+              <CardHeader>
+                <CardTitle>
+                  <div className="flex justify-around">
+                    <h1 className="mb-2"> StackOverFlow Clone</h1>
+                    <AiFillCheckCircle className=" text-green-900" />
+                  </div>
+                </CardTitle>
+                <CardDescription>
+                  This a full stack StackOverFlow clone
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Image
+                  src={img5}
+                  className="h-48 w-96 mb-3 object-cover"
+                  alt={""}
+                />
+                <h1 className="text-xl ">Languages & Libraries</h1>
+                <div className="flex flex-wrap w-80 my-2 text-blue-600">
+                  <p className="">React</p>
+                  <p className="ml-5">Vanilla Css</p>
+                  <p className="ml-5">Redux ToolKit</p>
+                  <p className="ml-3">Firebase</p>
+                  <p className="">NodeJs</p>
+                  <p className="ml-5">MongoDb</p>
+                  <p className="ml-5">Express Js</p>
+                </div>
+              </CardContent>
+              <CardFooter className="flex justify-around items-center">
+                <Link
+                  href={"https://glistening-profiterole-e5e772.netlify.app/"}
+                  target="_blank"
+                >
+                  <Button variant={"outline"}>Live Demo</Button>
+                </Link>
+                <Link
+                  href={"https://github.com/saurabhmpcs/user"}
+                  target="_blank"
+                >
+                  <Button variant={"outline"}>Code</Button>
+                </Link>
+              </CardFooter>
+            </Card>
           </div>
         </div>
       </section>
@@ -369,6 +457,10 @@ export default function Home() {
               <span className="text-blue-700 text-xl">Saurabh Singh</span>
               &nbsp;&copy;2023
             </h1>
+            <a href="tel:+123456789" className="flex items-center">
+              <BiPhoneCall />
+              &nbsp;<span className="text-blue-600">7701916720</span>
+            </a>
             <a href="tel:+123456789" className="flex items-center">
               <BiPhoneCall />
               &nbsp;<span className="text-blue-600">7701916720</span>
