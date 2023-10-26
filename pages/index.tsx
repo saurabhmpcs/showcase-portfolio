@@ -52,7 +52,7 @@ export default function Home() {
             </div>
             <div className="resume">
               <Link
-                href="https://rxresu.me/saurabh.rgt/saurabh-singh"
+                href="https://rxresu.me/saurabh.rgt/frontend"
                 target="_blank"
               >
                 <Button>Hire Me</Button>
@@ -160,7 +160,7 @@ export default function Home() {
                 </Tabs>
               </CardContent>
               <CardFooter className="flex justify-center">
-                <Link href="https://rxresu.me/saurabh.rgt/saurabh-singh">
+                <Link href="https://rxresu.me/saurabh.rgt/frontend">
                   <Button>Download Cv</Button>
                 </Link>
               </CardFooter>
@@ -421,7 +421,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="p-5 my-20 bg-slate-300">
+      <form id="contact" className="p-5 my-20 bg-slate-300">
         <div className="container-xl">
           <div className="text-center">
             <h1 className="text-3xl my-3 font-semi-bold">Leave Me A Message</h1>
@@ -438,14 +438,21 @@ export default function Home() {
               <Separator />
               <CardFooter className="flex justify-around mt-4">
                 <h2>Send me an Email Instead</h2>
-                <a href="mailto:saurabhmpcs1998@gmail.com">
-                  <AiFillMail className="text-2xl text-red-700" />
-                </a>
+                <div className="">
+                  {" "}
+                  <a href="mailto:saurabhmpcs1998@gmail.com">
+                    <AiFillMail className="text-2xl text-red-700 mt-4 " />
+                    <span className="text-xs text-indigo-500">
+                      {" "}
+                      saurabhmpcs1998@gmail.com
+                    </span>
+                  </a>
+                </div>
               </CardFooter>
             </Card>
           </div>
         </div>
-      </section>
+      </form>
 
       <Separator />
 
@@ -457,10 +464,6 @@ export default function Home() {
               <span className="text-blue-700 text-xl">Saurabh Singh</span>
               &nbsp;&copy;2023
             </h1>
-            <a href="tel:+123456789" className="flex items-center">
-              <BiPhoneCall />
-              &nbsp;<span className="text-blue-600">7701916720</span>
-            </a>
             <a href="tel:+123456789" className="flex items-center">
               <BiPhoneCall />
               &nbsp;<span className="text-blue-600">7701916720</span>
